@@ -45,6 +45,14 @@ h2 {
   background-color: #8c6910;
 }
 
+.display-2-small {
+  margin-bottom: 0;
+}
+
+.display-2-small::after{
+  display: none;
+}
+
 
 a.display-2{
   font-size: 1rem;

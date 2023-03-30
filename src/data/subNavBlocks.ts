@@ -1,4 +1,9 @@
-export const subnavBlocks = [
+export type SubnavBlockData = {
+  title: string
+  links: string[]
+}
+
+export const subnavBlocks: SubnavBlockData[] = [
   {
     title: 'Data & Research',
     links: [
