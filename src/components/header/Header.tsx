@@ -106,7 +106,7 @@ function LogoIconButton() {
             className='logo'
             height='100%'
             src={rfa_logo}
-            alt=''
+            alt='SC Revenue and Fiscal Affairs Office Logo'
           />
         </Box>
       </a>

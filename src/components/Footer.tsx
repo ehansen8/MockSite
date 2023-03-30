@@ -36,7 +36,7 @@ export function Footer() {
           <img
             width={135}
             src={rfa_logo_gray}
-            alt=''
+            alt='SC Revenue and Fiscal Affairs Office Logo'
           />
         </a>
       </Box>

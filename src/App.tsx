@@ -51,7 +51,6 @@ function App() {
         </Box>
       </main>
       <Footer />
-      <div className='App'></div>
     </>
   )
 }
