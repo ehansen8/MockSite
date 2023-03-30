@@ -3,7 +3,6 @@ import {
   Card,
   CardActionArea,
   CardContent,
-  Grid,
   Typography,
 } from '@mui/material'
 

@@ -18,6 +18,7 @@ import rfa_logo from '/rfa_logo.png'
 import Link from '@mui/material/Link'
 import { useState } from 'react'
 import { NavSearchBar } from './NavSearchBar'
+import { subnavBlocks } from '../data/subNavBlocks'
 
 const navLinks = ['About Us', 'Events', 'Boards & Committees']
 
@@ -187,52 +188,6 @@ function MenuButton({
   )
 }
 
-const gridBlocks = [
-  {
-    title: 'Data & Research',
-    links: [
-      'Economy',
-      'State Finances',
-      'Education',
-      'Healthcare',
-      'Local Government',
-      'Population and Demographics',
-      'State Register Calculations',
-      'Presentations',
-    ],
-  },
-  {
-    title: 'Geography & Mapping',
-    links: [
-      'Transportation Carrier Network (Uber)',
-      'SC Real Time Network',
-      'SC State GIS',
-      'Maps',
-      'Interactive Mapping',
-      'Statewide Aerial Imagery',
-    ],
-  },
-  {
-    title: 'Programs & Services',
-    links: [
-      'Precinct Demographics and Redistricting',
-      'State 911 Program',
-      'Data Services and Online Solutions',
-      'Geodetic Survey',
-      'Fiscal Analysis',
-      '2020 Census',
-    ],
-  },
-  {
-    title: 'Legislative Fiscal Impacts',
-    links: [
-      'Current General Assembly Session',
-      'Previous General Assembly Session',
-      'Forms',
-    ],
-  },
-]
-
 function HeaderDropdown({ isOpen }: { isOpen: boolean }) {
   return (
     <Collapse in={isOpen}>
@@ -267,7 +222,7 @@ function HeaderDropdown({ isOpen }: { isOpen: boolean }) {
           rowGap={4}
           sx={{ flexGrow: 1, borderTop: '2px solid #F3F6F9' }}
         >
-          {gridBlocks.map(({ title, links }) => (
+          {subnavBlocks.map(({ title, links }) => (
             <Grid
               item
               xs={4}

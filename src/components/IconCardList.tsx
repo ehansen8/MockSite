@@ -3,7 +3,7 @@ import dataIcon from '/Data-Research-Icon.svg'
 import geoIcon from '/Geography-Icon.svg'
 import programsIcon from '/Programs-Icon.svg'
 import legislativeIcon from '/Legislative-Icon.svg'
-import { Box, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 
 const cards = [
   { title: 'Data & Research', src: dataIcon },
@@ -24,7 +24,6 @@ function CardList() {
       bgcolor='#E1E5EB'
     >
       {cards.map(({ title, src }) => (
-        //TODO: change breakpoint sizing for different screen sizes
         <Grid
           item
           xs={12}

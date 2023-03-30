@@ -1,7 +1,7 @@
 import { Box, Chip, Link, Stack, Typography } from '@mui/material'
-import { Update } from './UpdateList'
+import { UpdateData } from '../data/updates'
 
-function UpdateCard({ title, content, date, status }: Update) {
+function UpdateCard({ title, content, date, status }: UpdateData) {
   return (
     <Stack gap={0.5}>
       <Link

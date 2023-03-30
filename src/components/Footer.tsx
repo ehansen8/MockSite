@@ -1,5 +1,6 @@
-import { Box, Link, List } from '@mui/material'
+import { Box, Link } from '@mui/material'
 import { Stack } from '@mui/system'
+import { locations } from '../data/locations'
 import rfa_logo_gray from '/rfa_logo_gray.png'
 
 const links = [
@@ -9,26 +10,6 @@ const links = [
   'Report Fraud',
   'Accessibility',
   'Contact Us',
-]
-
-const places = [
-  {
-    name: 'Main Office',
-    addrL1: '1000 Assembly St, Rembert Dennis Building, Suite 421',
-    addrL2: 'Columbia, SC 29201',
-  },
-
-  {
-    name: 'Geodetic Survey Section',
-    addrL1: '5 Geology Rd',
-    addrL2: 'Columbia, SC 29212',
-  },
-
-  {
-    name: 'Health and Demographics Division',
-    addrL1: '1000 Assembly St, Rembert Dennis Building, Suite 240',
-    addrL2: 'Columbia, SC 29201',
-  },
 ]
 
 function Footer() {
@@ -69,7 +50,7 @@ function Footer() {
         ))}
       </Stack>
       <Stack gap={2}>
-        {places.map(({ name, addrL1, addrL2 }) => (
+        {locations.map(({ name, addrL1, addrL2 }) => (
           <Box sx={{ color: '#93A4BD' }}>
             <h2 className='footer-header'>{name}</h2>
             <div>{addrL1}</div>

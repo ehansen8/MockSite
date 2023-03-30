@@ -1,16 +1,5 @@
 import { Box, Divider, Grid, Link, Typography } from '@mui/material'
-
-const links = [
-  'Overview and History of the South Carolina State Budget',
-  'Overview and History of the South Carolina State Budget',
-  'Overview and History of the South Carolina State Budget',
-  'Employer Contribution Trends',
-  'Employer Contribution Trends - June 4, 2019',
-  'Employer Contribution Trends - June 4, 2019',
-  'Appropriation Bills and Acts',
-  'Executive Budget Office State Agency Budget Plans(Requests)',
-  'Executive Budget Office State Agency Budget Plans(Requests)',
-]
+import { services } from '../data/services'
 
 function Services() {
   return (
@@ -30,7 +19,7 @@ function Services() {
         spacing={3}
         pt={2}
       >
-        {links.map((link) => (
+        {services.map((link) => (
           <Grid
             item
             sm={6}

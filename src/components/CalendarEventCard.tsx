@@ -1,15 +1,15 @@
 import { Box, Chip, Stack, SxProps, Typography } from '@mui/material'
-import { CalendarEvent } from './CalendarEventList'
 import RoomIcon from '@mui/icons-material/Room'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PhoneIcon from '@mui/icons-material/Phone'
+import { CalendarEventData } from '../data/calendarEvents'
 
 const iconStyle: SxProps = {
   color: '#8C6910',
   mr: 1,
 }
 
-const ColoredChip = ({ status }: { status: CalendarEvent['status'] }) => {
+const ColoredChip = ({ status }: { status: CalendarEventData['status'] }) => {
   const canceled: SxProps = {
     bgcolor: '#DB222C',
   }
@@ -35,7 +35,7 @@ function CalendarEventCard({
   time,
   phone,
   status,
-}: CalendarEvent) {
+}: CalendarEventData) {
   return (
     <Stack
       direction='row'

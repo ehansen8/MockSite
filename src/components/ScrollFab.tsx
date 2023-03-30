@@ -1,6 +1,5 @@
 import { Box, IconButton, Link } from '@mui/material'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import { Viewport } from './Viewport'
 
 export function ScrollFab() {
   return (
@@ -9,7 +8,6 @@ export function ScrollFab() {
       width='100%'
       textAlign='right'
     >
-      <Viewport />
       <Link
         href='#'
         underline='hover'
