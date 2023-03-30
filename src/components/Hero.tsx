@@ -1,7 +1,7 @@
 import { Grid, Stack, Typography } from '@mui/material'
 import { SearchBar } from './SearchBar'
 
-function Hero() {
+export function Hero() {
   return (
     <Grid
       container
@@ -33,4 +33,3 @@ function Hero() {
     </Grid>
   )
 }
-export default Hero

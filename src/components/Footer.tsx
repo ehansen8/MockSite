@@ -12,7 +12,7 @@ const links = [
   'Contact Us',
 ]
 
-function Footer() {
+export function Footer() {
   return (
     <Box
       className='footer'
@@ -39,8 +39,9 @@ function Footer() {
         </a>
       </Box>
       <Stack gap={2}>
-        {links.map((link) => (
+        {links.map((link, idx) => (
           <Link
+            key={idx}
             href='#'
             underline='hover'
             color='inherit'
@@ -50,8 +51,11 @@ function Footer() {
         ))}
       </Stack>
       <Stack gap={2}>
-        {locations.map(({ name, addrL1, addrL2 }) => (
-          <Box sx={{ color: '#93A4BD' }}>
+        {locations.map(({ name, addrL1, addrL2 }, idx) => (
+          <Box
+            key={idx}
+            sx={{ color: '#93A4BD' }}
+          >
             <h2 className='footer-header'>{name}</h2>
             <div>{addrL1}</div>
             <div>{addrL2}</div>
@@ -61,4 +65,3 @@ function Footer() {
     </Box>
   )
 }
-export default Footer

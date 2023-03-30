@@ -1,7 +1,7 @@
 import { Box, Divider, Grid, Link, Typography } from '@mui/material'
 import { services } from '../data/services'
 
-function Services() {
+export function ServiceList() {
   return (
     <Box mb={3}>
       <Typography
@@ -19,8 +19,9 @@ function Services() {
         spacing={3}
         pt={2}
       >
-        {services.map((link) => (
+        {services.map((link, idx) => (
           <Grid
+            key={idx}
             item
             sm={6}
             md={4}
@@ -32,4 +33,3 @@ function Services() {
     </Box>
   )
 }
-export default Services

@@ -12,7 +12,7 @@ const cards = [
   { title: 'Legislative Fiscal Impacts', src: legislativeIcon },
 ]
 
-function CardList() {
+export function IconCardList() {
   return (
     <Grid
       container
@@ -23,8 +23,9 @@ function CardList() {
       py={{ xs: 3, sm: 6 }}
       bgcolor='#E1E5EB'
     >
-      {cards.map(({ title, src }) => (
+      {cards.map(({ title, src }, idx) => (
         <Grid
+          key={idx}
           item
           xs={12}
           sm={6}
@@ -39,4 +40,3 @@ function CardList() {
     </Grid>
   )
 }
-export default CardList

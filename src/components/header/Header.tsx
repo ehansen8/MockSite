@@ -1,28 +1,15 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Collapse,
-  Divider,
-  Grid,
-  Popover,
-  Stack,
-  SxProps,
-  Toolbar,
-  Typography,
-} from '@mui/material'
+import { AppBar, Box, Button, Popover, Stack, Toolbar } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
-import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close'
 import rfa_logo from '/rfa_logo.png'
 import Link from '@mui/material/Link'
 import { useState } from 'react'
-import { NavSearchBar } from './NavSearchBar'
-import { subnavBlocks } from '../data/subNavBlocks'
+import { NavSearchBar } from '../NavSearchBar'
+import { HeaderDropdown } from './HeaderDropdown'
+import { MenuButton } from './MenuButton'
 
 const navLinks = ['About Us', 'Events', 'Boards & Committees']
 
-const subnavLinks = [
+export const subnavLinks = [
   'Home',
   'News & Events',
   'About Us',
@@ -155,103 +142,5 @@ export function Header() {
         sx={{ backgroundColor: '#1B3A61', width: '100%', height: '8px' }}
       ></Box>
     </AppBar>
-  )
-}
-
-const menuButtonStyle: SxProps = {
-  display: 'flex',
-  flexDirection: 'column',
-  height: '100%',
-  width: '67px',
-  bgcolor: '#3068AD',
-  ':hover': {
-    bgcolor: '#225089',
-  },
-}
-
-function MenuButton({
-  isOpen,
-  handleClick,
-}: {
-  isOpen: boolean
-  handleClick: () => void
-}) {
-  return (
-    <Button
-      variant='contained'
-      onClick={handleClick}
-      sx={menuButtonStyle}
-    >
-      {isOpen ? <CloseIcon fontSize='large' /> : <MenuIcon fontSize='large' />}
-      <Typography fontSize={12}>{isOpen ? 'Close' : 'Menu'}</Typography>
-    </Button>
-  )
-}
-
-function HeaderDropdown({ isOpen }: { isOpen: boolean }) {
-  return (
-    <Collapse in={isOpen}>
-      <Stack direction='row'>
-        <Stack
-          width='25%'
-          gap={1}
-          alignItems='center'
-          bgcolor='#F3F6F9'
-          px={6}
-          py={4}
-          divider={<Divider sx={{ width: '100%', bgcolor: '#CCCCCC' }} />}
-        >
-          {subnavLinks.map((link) => (
-            <Link
-              href='#'
-              sx={{ color: '#333' }}
-              underline='hover'
-              fontSize='15px'
-              fontWeight={700}
-              textAlign='center'
-              px={3}
-              py={1}
-            >
-              {link}
-            </Link>
-          ))}
-        </Stack>
-        <Grid
-          container
-          padding={4}
-          rowGap={4}
-          sx={{ flexGrow: 1, borderTop: '2px solid #F3F6F9' }}
-        >
-          {subnavBlocks.map(({ title, links }) => (
-            <Grid
-              item
-              xs={4}
-            >
-              <Box mb={2}>
-                <Link
-                  underline='hover'
-                  className='display-2'
-                  mb={4}
-                  href='#'
-                >
-                  {title}
-                </Link>
-              </Box>
-              <Stack gap={1}>
-                {links.map((link) => (
-                  <Link
-                    href='#'
-                    sx={{ color: 'black' }}
-                    underline='hover'
-                  >
-                    {link}
-                  </Link>
-                ))}
-              </Stack>
-            </Grid>
-          ))}
-        </Grid>
-      </Stack>
-    </Collapse>
   )
 }

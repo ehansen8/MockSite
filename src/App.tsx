@@ -1,11 +1,11 @@
 import { Box, Grid } from '@mui/material'
-import { Header } from './components/Header'
-import Hero from './components/Hero'
-import IconCardList from './components/IconCardList'
-import RecentUpdateList from './components/UpdateList'
-import Services from './components/Services'
-import CalendarEventList from './components/CalendarEventList'
-import Footer from './components/Footer'
+import { Header } from './components/header/Header'
+import { Hero } from './components/Hero'
+import { IconCardList } from './components/IconCardList'
+import { UpdateList } from './components/UpdateList'
+import { ServiceList } from './components/ServiceList'
+import { CalendarEventList } from './components/CalendarEventList'
+import { Footer } from './components/Footer'
 import { ScrollFab } from './components/ScrollFab'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Hero />
       <main>
         <Box
-          className='Main-Container'
+          className='main-container'
           bgcolor='#E1E5EB'
           px={{ xs: 2, sm: 10 }}
           mb={3}
@@ -23,11 +23,11 @@ function App() {
           <IconCardList />
         </Box>
         <Box
-          className='Main-Container'
+          className='main-container'
           px={{ xs: 2, sm: 10 }}
           mb={2}
         >
-          <Services />
+          <ServiceList />
           <Grid
             container
             columnSpacing={4}
@@ -38,7 +38,7 @@ function App() {
               item
               md={6}
             >
-              <RecentUpdateList />
+              <UpdateList />
             </Grid>
             <Grid
               item

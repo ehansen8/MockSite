@@ -2,7 +2,7 @@ import { Button, Stack } from '@mui/material'
 import { updates } from '../data/updates'
 import UpdateCard from './UpdateCard'
 
-function UpdateList() {
+export function UpdateList() {
   return (
     <div>
       <div className='display-2'>Recent Updates</div>
@@ -10,12 +10,14 @@ function UpdateList() {
         gap={4}
         mb={4}
       >
-        {updates.map((update) => (
-          <UpdateCard {...update} />
+        {updates.map((update, idx) => (
+          <UpdateCard
+            key={idx}
+            {...update}
+          />
         ))}
       </Stack>
       <Button variant='contained'>View More</Button>
     </div>
   )
 }
-export default UpdateList
