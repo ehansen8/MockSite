@@ -1,5 +1,5 @@
 import { Button, Divider, Stack } from '@mui/material'
-import { calendarEvents } from '../data/calendarEvents'
+import { calendarEvents } from '../../data/calendarEvents'
 import CalendarEventCard from './CalendarEventCard'
 
 export function CalendarEventList() {

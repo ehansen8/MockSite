@@ -1,5 +1,5 @@
 import { Box, Chip, Link, Stack, Typography } from '@mui/material'
-import { UpdateData } from '../data/updates'
+import { UpdateData } from '../../data/updates'
 
 function UpdateCard({ title, content, date, status }: UpdateData) {
   return (

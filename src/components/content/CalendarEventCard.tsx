@@ -2,7 +2,7 @@ import { Box, Chip, Stack, SxProps, Typography } from '@mui/material'
 import RoomIcon from '@mui/icons-material/Room'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import PhoneIcon from '@mui/icons-material/Phone'
-import { CalendarEventData } from '../data/calendarEvents'
+import { CalendarEventData } from '../../data/calendarEvents'
 
 const iconStyle: SxProps = {
   color: '#8C6910',

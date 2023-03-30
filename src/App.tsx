@@ -1,12 +1,12 @@
 import { Box, Grid } from '@mui/material'
 import { Header } from './components/header/Header'
-import { Hero } from './components/Hero'
-import { IconCardList } from './components/IconCardList'
-import { UpdateList } from './components/UpdateList'
-import { ServiceList } from './components/ServiceList'
-import { CalendarEventList } from './components/CalendarEventList'
+import { IconCardList } from './components/content/IconCardList'
+import { UpdateList } from './components/content/UpdateList'
+import { ServiceList } from './components/content/ServiceList'
 import { Footer } from './components/Footer'
 import { ScrollFab } from './components/ScrollFab'
+import { CalendarEventList } from './components/content/CalendarEventList'
+import { Hero } from './components/Hero'
 
 function App() {
   return (

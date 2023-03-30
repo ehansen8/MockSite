@@ -1,5 +1,5 @@
 import { Button, Stack } from '@mui/material'
-import { updates } from '../data/updates'
+import { updates } from '../../data/updates'
 import UpdateCard from './UpdateCard'
 
 export function UpdateList() {

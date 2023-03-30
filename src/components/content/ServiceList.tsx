@@ -1,5 +1,5 @@
 import { Box, Divider, Grid, Link, Typography } from '@mui/material'
-import { services } from '../data/services'
+import { services } from '../../data/services'
 
 export function ServiceList() {
   return (

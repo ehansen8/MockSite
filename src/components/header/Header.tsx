@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import rfa_logo from '/rfa_logo.png'
 import Link from '@mui/material/Link'
 import { useState } from 'react'
-import { NavSearchBar } from '../NavSearchBar'
+import { NavSearchBar } from './NavSearchBar'
 import { HeaderDropdown } from './HeaderDropdown'
 import { MenuButton } from './MenuButton'
 
@@ -54,7 +54,10 @@ export function Header() {
           mx={{ xs: 0.5, sm: 1.5 }}
           height='100%'
         >
-          <a href='#'>
+          <a
+            href='#'
+            aria-label='Home'
+          >
             <Box
               p={{ xs: 0.5, sm: 1.5 }}
               height='100%'
@@ -104,6 +107,7 @@ export function Header() {
             )
           })}
           <Button
+            aria-label='Open Search'
             className={searchOpen ? 'button-active' : ''}
             onClick={handleSearchClick}
             variant='outlined'

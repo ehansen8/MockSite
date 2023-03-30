@@ -30,7 +30,10 @@ export function Footer() {
       >
         <Box>South Carolina</Box>
         <Box mb={2}>Revenue and Fiscal Affairs Office</Box>
-        <a href='#'>
+        <a
+          href='#'
+          aria-label='Home'
+        >
           <img
             width={135}
             src={rfa_logo_gray}

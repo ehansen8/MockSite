@@ -17,6 +17,7 @@ export function ScrollFab() {
       <IconButton
         href='#'
         color='primary'
+        aria-label='Scroll to Top'
       >
         <KeyboardArrowUpIcon fontSize='large' />
       </IconButton>
