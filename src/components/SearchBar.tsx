@@ -1,5 +1,6 @@
 import SearchIcon from '@mui/icons-material/Search'
 import { Box, Button, SxProps, TextField } from '@mui/material'
+import { ChangeEvent, useState } from 'react'
 
 type SearchBarProps = {
   minWidth?: number
@@ -12,6 +13,13 @@ const buttonStyle: SxProps = {
 }
 
 export function SearchBar({ minWidth }: SearchBarProps) {
+  const [input, setInput] = useState('')
+
+  function handleInput(event: ChangeEvent<HTMLInputElement>) {
+    setInput(event.target.value)
+  }
+
+  function handleSearch() {}
   return (
     <Box
       display='flex'
@@ -20,6 +28,8 @@ export function SearchBar({ minWidth }: SearchBarProps) {
       justifyContent='center'
     >
       <TextField
+        onChange={handleInput}
+        value={input}
         placeholder='Search rfa.sc.gov'
         inputProps={{ 'aria-label': 'search' }}
         sx={{
@@ -30,6 +40,7 @@ export function SearchBar({ minWidth }: SearchBarProps) {
         }}
       />
       <Button
+        onClick={handleSearch}
         aria-label='search'
         variant={'contained'}
         color='primary'

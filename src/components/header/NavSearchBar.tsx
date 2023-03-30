@@ -7,7 +7,7 @@ import {
   TextField,
 } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 const buttonStyle: SxProps = {
   px: 4,
@@ -23,6 +23,7 @@ export function NavSearchBar({ display }: { display?: BoxProps['display'] }) {
   function handleSearchClick(event: React.MouseEvent<HTMLElement>) {
     setAnchorEl(event.currentTarget)
   }
+
   const handleSearchClose = () => {
     setAnchorEl(null)
   }
@@ -67,9 +68,18 @@ export function NavSearchBar({ display }: { display?: BoxProps['display'] }) {
 }
 
 function SearchBarPopover() {
+  const [input, setInput] = useState('')
+
+  function handleInput(event: ChangeEvent<HTMLInputElement>) {
+    setInput(event.target.value)
+  }
+  function handleSearch() {}
+
   return (
     <Box display='flex'>
       <TextField
+        onChange={handleInput}
+        value={input}
         placeholder='Search rfa.sc.gov'
         inputProps={{ 'aria-label': 'search' }}
         sx={{
@@ -80,6 +90,7 @@ function SearchBarPopover() {
         }}
       />
       <Button
+        onClick={handleSearch}
         aria-label='search'
         variant={'outlined'}
         color='primary'

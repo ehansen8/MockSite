@@ -14,10 +14,14 @@ import Link from '@mui/material/Link'
 import { SubnavBlockData, subnavBlocks } from '../../data/subNavBlocks'
 import { subnavLinks } from './Header'
 import { useEffect, useState } from 'react'
+import { SearchBar } from '../SearchBar'
 
 export function HeaderDropdown({ isOpen }: { isOpen: boolean }) {
   return (
     <Collapse in={isOpen}>
+      <Box m={2}>
+        <SearchBar />
+      </Box>
       <Stack direction={{ xs: 'column', sm: 'row' }}>
         <Stack
           width={{ xs: '100%', sm: '25%' }}
