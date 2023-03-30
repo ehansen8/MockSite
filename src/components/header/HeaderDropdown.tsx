@@ -19,7 +19,10 @@ import { SearchBar } from '../SearchBar'
 export function HeaderDropdown({ isOpen }: { isOpen: boolean }) {
   return (
     <Collapse in={isOpen}>
-      <Box m={2}>
+      <Box
+        m={2}
+        display={{ xs: 'block', sm: 'none' }}
+      >
         <SearchBar />
       </Box>
       <Stack direction={{ xs: 'column', sm: 'row' }}>
